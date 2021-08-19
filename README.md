@@ -45,7 +45,12 @@ We can find it in out Docker application.
 - If you choose to run a specific version add `:<version number>` after `-d postgres:` .
 - Docker will be running on port 5432 by default.
 - Run this command in your terminal. 
-`docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:12`
+```
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:12
+```
+.  
+
+
 - After it is downloaded it will be vailable in our docker application
 
 ### This is a brand new postgres server, be sure to create a Database, a schema , and a table populated with data. To connect we need at least a database created.. 
@@ -85,7 +90,7 @@ We can find it in out Docker application.
 * TSL/SSl Mode : Configure this based on your needs. Or select disable if you wish.
 * Version : Choose to the postgresql version you chose to donwload.
 
-# Click on save and test when your done. If the connection is good then it should say so. Click back after.
+# Click on save and test when you're done. If the connection is good then it should say so. Click back after.
 
 <img width="409" alt="Screen Shot 2021-08-19 at 10 41 28 AM" src="https://user-images.githubusercontent.com/61709408/130155859-6a2f0bf8-61d0-4d36-9829-1b3f958886be.png">
 
