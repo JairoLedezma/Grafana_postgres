@@ -46,6 +46,7 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 - version - 12 , provided by the postgres community
 - This command will pull version 12 of postgres. This is the most recent version that grafana supports. You may choose from versions 9.3 - 12. 
 - If you choose to run a specific version add `:<version number>` after `-d postgres:` .
+- Postgresql requires you to add a `POSTGRES_PASSWORD` environment variable when you first run it. This can be anything you choose.
 - Docker will be running on port 5432 by default.
 - Run this command in your terminal. 
  
@@ -60,7 +61,7 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 - When the next page loads clock on Add Data source 
 - Scroll down until you postgresql and click on select. 
 
-<img width="1792" alt="Screen Shot 2021-08-19 at 5 40 51 PM" src="https://user-images.githubusercontent.com/61709408/130155509-6a408ca7-bcd2-4cf7-acaa-28b32d4b9294.png">
+<img width="1782" alt="Screen Shot 2021-08-20 at 11 03 09 AM" src="https://user-images.githubusercontent.com/61709408/130261504-5d16648a-34e3-4bbe-ae6c-5821d211d9d6.png">
 .  
 
 
