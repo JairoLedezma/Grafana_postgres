@@ -9,7 +9,7 @@ We will be running a dockerfile for both items to create containers for them.
 
 
 ## Step 1 - Creating our Grafana container
-- version - 8.1.1
+- version - 8.1.1 , provided by grafana
 - This command will pull the latest version of grafana (8.1.1) if you choose to run a specific version add `:<version number>` after grafana/grafana.
 - You may specify your port at this step in the process after the `-p`. In this case, grafana will be running on port 3000.
 - Run this command in your terminal. 
@@ -18,17 +18,16 @@ We will be running a dockerfile for both items to create containers for them.
 
 ```
 - After docker downloads the required files it will output the ID of the container and be running.
-We can find it in out Docker application.
+- We can run this following command to check if our container is running.
+```
+$ docker container ls
 
-<img width="1259" alt="Screen Shot 2021-08-19 at 5 00 31 PM" src="https://user-images.githubusercontent.com/61709408/130150780-204617a9-ac48-47e1-aac2-39a58dab2203.png">
+CONTAINER ID   IMAGE                        COMMAND                  CREATED        STATUS              PORTS                                       NAMES
+d8e17aa05587   grafana/grafana              "/run.sh"                41 hours ago   Up About a minute   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   grafana
 
-- If we hover over it it will show us a couple of options reharding the container. Click on open in browser to take us to the browser UI.   
+```
 
-
-
-<img width="1050" alt="Screen Shot 2021-08-19 at 5 09 38 PM" src="https://user-images.githubusercontent.com/61709408/130150976-e16cf8d3-6e17-41a6-bfc0-77618d14e6c7.png">
-
-- We will be taken to our locally running grafana server hosted on port 3000. It can be reached by going to the URL : `http://localhost:3000/login`.   
+- Our grafana server will be hosted on port 3000. It can be reached by going to the URL : `http://localhost:3000/login`.   
 
 
 
@@ -40,15 +39,16 @@ We can find it in out Docker application.
 
 
 ## Step 3 - Creating our postgresql container
-- version - 12
-- This command will pull version 12 of postgres. This is the most recent veriosn that grafana supports. You may choose from versions 9.3 - 12. 
-- If you choose to run a specific version add `:<version number>` after `-d postgres:` .
-- Docker will be running on port 5432 by default.
-- Run this command in your terminal. 
 ```
 docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres:12
 ```
-.  
+. 
+- version - 12 , provided by the postgres community
+- This command will pull version 12 of postgres. This is the most recent version that grafana supports. You may choose from versions 9.3 - 12. 
+- If you choose to run a specific version add `:<version number>` after `-d postgres:` .
+- Docker will be running on port 5432 by default.
+- Run this command in your terminal. 
+ 
 
 
 - After it is downloaded it will be vailable in our docker application
